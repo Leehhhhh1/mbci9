@@ -3,3 +3,5 @@ with open('20260205_raw.bin', 'rb') as f:
 
 print(raw.hex(' '))
 print(len(raw))
+#
+#adsadwasd
