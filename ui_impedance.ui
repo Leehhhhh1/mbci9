@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Impedance</class>
+ <widget class="QWidget" name="Impedance">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>942</width>
+    <height>811</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="label_background">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>781</width>
+     <height>811</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>background.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Confirm">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>490</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>确定</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Cancel">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>550</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>取消</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Reset">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>610</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>重设</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Fpz">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>100</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Fpz</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Fp2">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>110</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Fp2</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Fp1">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>110</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Fp1</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Fz">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>240</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Fz</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Cz">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>380</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Cz</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Pz">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>530</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Pz</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Oz">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>670</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Oz</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_F3">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>230</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>F3</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_F4">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>230</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>F4</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_F7">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>210</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>F7</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_F8">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>210</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>F8</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_C3">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>380</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>C3</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_C4">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>380</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>C4</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_T7">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>380</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>T7</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_T8">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>380</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>T8</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_P3">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>540</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>P3</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_P4">
+   <property name="geometry">
+    <rect>
+     <x>480</x>
+     <y>540</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>P4</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_P7">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>550</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>P7</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_P8">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>550</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>P8</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_O1">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>660</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>O1</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_O2">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>660</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    background-color: #808080;  /* 初始颜色 */
+    color: white;
+    font-size: 18px;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>O2</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>50</y>
+     <width>160</width>
+     <height>113</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="2" column="0">
+     <widget class="QSpinBox" name="spinBox_Max"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QSpinBox" name="spinBox_Min"/>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>kHz</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="2">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>最大阻抗值</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="2">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>最小阻抗值</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>kHz</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="QLabel" name="label_5">
+      <property name="styleSheet">
+       <string notr="true">font: 700 9pt &quot;Microsoft YaHei UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>阻抗区间设置</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
