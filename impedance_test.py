@@ -2,46 +2,29 @@ from PyQt5.QtWidgets import QWidget,QTextEdit,QLabel
 from PyQt5.QtGui import QPixmap
 from connection_multi_new3 import Trans
 from threading import Thread
+from ui_impedance import Ui_Impedance
 
 
-class ImpedanceWidget(QWidget):
+class ImpedanceWidget(QWidget,Ui_Impedance):
     def __init__(self,trans):
         super().__init__()
+        self.setupUi(self)
         self.trans = trans
-        self.eightchannels = ["Fp1", "Fp2", "C3", "C4", "T7", "T8", "O1", "O2"]  # 八导名称
-        self.sum_channels_text = []  # 总通道数名称
+        self.channels = [self.FP1, self.FP2, self.F7, self.F8, self.F3, self.F4, self.Fz, self.FC5,
+                        self.FC1,self.FC2,self.FC6,self.T3,self.C3,self.Cz,self.C4,self.T4,
+                        self.CP5,self.CP1,self.CP2,self.CP6,self.P7,self.P3,self.Pz,self.P4,
+                        self.P8,self.PO7,self.PO3,self.PO4,self.PO8,self.O1,self.Oz,self.O2
+                        ]  # 32导名称
+        self.channels_names = [
+            'FP1', 'FP2', 'F7', 'F8', 'F3', 'F4', 'Fz', 'FC5',
+            'FC1', 'FC2', 'FC6', 'T3', 'C3', 'Cz', 'C4', 'T4',
+            'CP5', 'CP1', 'CP2', 'CP6', 'P7', 'P3', 'Pz', 'P4',
+            'P8', 'PO7', 'PO3', 'PO4', 'PO8', 'O1', 'Oz', 'O2'
+        ]
         # self.impedance_test(1)
-        self.trans.num_signal.connect(self.impedance_test)
+        # self.trans.num_signal.connect(self.impedance_test)
 
 
-    # def impedance_test(self,num):
-    #     num_=num-1
-    #     x_offset = 460 * (num_ % 4)           #x轴偏移量
-    #     y_offset = 560 * (num_ // 4)          #y轴偏移量
-    #     label = QLabel(self)
-    #     pixmap = QPixmap('background.png')
-    #     label.setPixmap(pixmap)
-    #     label.setGeometry(x_offset,y_offset,pixmap.width(),pixmap.height())            #每行四个
-    #     label.show()
-    #
-    #     for i in range(8):
-    #         text = QTextEdit(self)
-    #         text.setReadOnly(True)
-    #         text.setFixedSize(75,56)
-    #         text.setStyleSheet("font-size: 15px;background-color:rgba(255,0,0,250)")
-    #         text.setText( "<div style='text-align: center;  font-family: Microsoft YaHei UI;'>" +
-    #                              self.eightchannels[i] + '<br>>' + str(50) + 'kΩ</div>')
-    #         self.positions = [
-    #             (120, 95), (250, 95),  # Fp1, Fp2
-    #             (100, 260), (300, 260),  # C3, C4
-    #             (10, 260), (385, 260),  # T7, T8
-    #             (105, 445), (275, 445),  # O1, O2
-    #         ]
-    #         x,y=self.positions[i]
-    #         text.move(x+x_offset,y+y_offset)
-    #         text.show()
-    #         self.sum_channels_text.append(text)
-    #
-    #     self.setMinimumSize(460 * 4, 560 * ((num+3)//4))   # widget所需要的大小
+
 
 

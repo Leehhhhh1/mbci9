@@ -301,7 +301,7 @@ class Trans(QObject):
                     time.sleep(0.05)
             else:  # 阻抗检测
                 try:
-                    value = self.value - 1  # 实际连接个数
+                    value = self.value   # 实际连接个数
                     all_data = []
                     for i in range(value):
                         id_ = i + 1

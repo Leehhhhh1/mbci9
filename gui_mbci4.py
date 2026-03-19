@@ -29,7 +29,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.num_connection = 0 # 当前连接数
         self.flag_transmit = True # 传输状态 True：start False：stop
         self.flag_impedance = True # 阻抗状态 True: start False: stop
-        self.flag = True
+        # self.flag = True
 
         self.num_channels = 32  # 通道数
         self.samples = 250 # 采样率
@@ -50,11 +50,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.scroll_EEG.setWidgetResizable(True)
         self.lineEdit.returnPressed.connect(self.handle_input)
 
-        #创建阻抗检测模块
-        # self.impedancewidget = ImpedanceWidget(self.trans)
-        # self.scrollArea_impedance.setWidget(self.impedancewidget)
-        # self.scrollArea_impedance.setWidgetResizable(True)
-
+        # 创建阻抗检测模块
+        self.impedancewidget = ImpedanceWidget(self.trans)
+        self.scrollArea_impedance.setWidget(self.impedancewidget)
+        self.scrollArea_impedance.setWidgetResizable(True)
 
         # 右侧频谱图
         # 创建下拉菜单 (QComboBox)
@@ -76,14 +75,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             槽函数设置
         '''
         # 创建数据传输的连接进程
-
         self.trans.connected_signal.connect(self.append_output)
         self.trans.animate_signal.connect(self.update_animate)
         self.trans.impedance_signal.connect(self.update_impedance)
         # self.trans.num_singal.connect(self.multi_num)
-
         self.trigger.connect(self.trans.sample_change)
-
 
         # 页面切换时给出提示
         # 按钮槽函数
@@ -140,7 +136,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def impedance_start(self):
         self.trans.queue_connect.put('开始阻抗检测！')
         self.trans.start_event.set()
-        self.trans.impedance_flag = True
+
 
     # 数据传输按钮槽函数
     def start_data_stream(self):
@@ -202,15 +198,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def start_impedance(self):
         try:
             if self.flag_impedance:
-                self.flag = True
+                # self.flag = True
+                self.trans.queue_control.put('B')
                 self.trans.queue_control.put('!')
                 self.impedance_start()
+                self.trans.impedance_flag = True
                 self.pushButton_start.setText("停止")
-
             else:
-                self.flag = False
+                # self.flag = False
                 self.pushButton_start.setText("开始")
-                self.trans.queue_control.put('s')
+                self.trans.queue_control.put('S')
                 self.trans.impedance_flag = False
             self.flag_impedance = not self.flag_impedance
         except Exception as e:
@@ -220,22 +217,22 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def update_impedance(self, data):
         try:
             if not self.flag_impedance:
-                self.sum_channels = self.num_channels * self.trans.value   # 总通道数
-                self.eeg_impedence = np.zeros((self.sum_channels, self.downsamples * 10))
-                self.eeg_impedence = np.hstack((self.eeg_impedence, data))
-                self.eeg_impedence = self.eeg_impedence[:, -self.downsamples * 10:]
-                impedance = preprocessing.get_impedance(self.eeg_impedence)
-                for id in range(self.sum_channels):
-                    self.impedancewidget.sum_channels_text[id].setText(
+                sum_channels = self.num_channels    # 总通道数
+                eeg_impedance = np.zeros((sum_channels, self.downsamples * 10))
+                eeg_impedance = np.hstack((eeg_impedance, data))
+                eeg_impedance = eeg_impedance[:, -self.downsamples * 10:]
+                impedance = preprocessing.get_impedance(eeg_impedance)
+                for id in range(sum_channels):
+                    self.impedancewidget.channels[id].setText(
                         "<div style='text-align: center; font-size: 10pt; font-family: Microsoft YaHei UI;'>" +
-                        self.impedancewidget.eightchannels[id%8] + '<br>' + '{:.2f}'.format(impedance[id]) + 'KΩ</div>')
+                        self.impedancewidget.channels_names[id] + '<br>' + '{:.2f}'.format(impedance[id]) + 'KΩ</div>')
                     if impedance[id] > parameter.impedance_max:
                         color = QColor(220, 20, 60)
                     elif impedance[id] < parameter.impedance_min:
                         color = QColor(50, 205, 50)
                     else:
                         color = QColor(255, 140, 0)
-                    self.impedancewidget.sum_channels_text[id].setStyleSheet(f"background-color: {color.name()};")
+                    self.impedancewidget.channels[id].setStyleSheet(f"background-color: {color.name()};")
                     id += 1
         except Exception as e:
             # print(2)

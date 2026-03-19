@@ -6,631 +6,1034 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>942</width>
-    <height>811</height>
+    <width>1249</width>
+    <height>910</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="label_background">
+  <widget class="QLabel" name="P8">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>650</x>
+     <y>600</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>P8</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="C3">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>440</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>C3</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="F3">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>280</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>F3</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="T4">
+   <property name="geometry">
+    <rect>
+     <x>700</x>
+     <y>440</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>T4</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="PO7">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>690</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>PO7</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="FP2">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>150</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>FP2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="F7">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>230</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>F7</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="FC2">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>380</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>FC2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="CP2">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>500</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>CP2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="CP1">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>500</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>CP1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="P7">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>610</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>P7</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Pz">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>560</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>Pz</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="T3">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>440</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>T3</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="FP1">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>150</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>FP1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="PO4">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>660</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>PO4</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="O1">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>740</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>O1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="PO3">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>660</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>PO3</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="O2">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>730</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>O2</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="F8">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>230</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>F8</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="FC5">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>380</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>FC5</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Fz">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>310</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>Fz</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="CP5">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>530</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>CP5</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="F4">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>280</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>F4</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="P4">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>570</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>P4</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="Oz">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>750</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>Oz</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="C4">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>440</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>C4</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="P3">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>580</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>P3</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="FC6">
+   <property name="geometry">
+    <rect>
+     <x>600</x>
+     <y>380</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>FC6</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="CP6">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>530</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>CP6</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="PO8">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>680</y>
+     <width>81</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>PO8</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
      <y>0</y>
-     <width>781</width>
-     <height>811</height>
+     <width>801</width>
+     <height>861</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>background.png</pixmap>
+    <pixmap>background2.jpg</pixmap>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_Confirm">
+  <widget class="QLabel" name="Cz">
    <property name="geometry">
     <rect>
-     <x>810</x>
-     <y>490</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>确定</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_Cancel">
-   <property name="geometry">
-    <rect>
-     <x>810</x>
-     <y>550</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>取消</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_Reset">
-   <property name="geometry">
-    <rect>
-     <x>810</x>
-     <y>610</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>重设</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_Fpz">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>100</y>
-     <width>51</width>
+     <x>380</x>
+     <y>440</y>
+     <width>81</width>
      <height>51</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
    </property>
-   <property name="text">
-    <string>Fpz</string>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
    </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_Fp2">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>110</y>
-     <width>51</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>Fp2</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_Fp1">
-   <property name="geometry">
-    <rect>
-     <x>270</x>
-     <y>110</y>
-     <width>51</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>Fp1</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_Fz">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>240</y>
-     <width>51</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>Fz</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_Cz">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>380</y>
-     <width>51</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
    </property>
    <property name="text">
     <string>Cz</string>
    </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_Pz">
+  <widget class="QLabel" name="FC1">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>530</y>
-     <width>51</width>
+     <x>300</x>
+     <y>380</y>
+     <width>81</width>
      <height>51</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
    </property>
    <property name="text">
-    <string>Pz</string>
+    <string>FC1</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_Oz">
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>670</y>
-     <width>51</width>
-     <height>51</height>
+     <x>890</x>
+     <y>100</y>
+     <width>71</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
+    <string notr="true">background-color: rgb(220, 20, 60);</string>
    </property>
    <property name="text">
-    <string>Oz</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_F3">
+  <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>230</y>
-     <width>51</width>
-     <height>51</height>
+     <x>890</x>
+     <y>200</y>
+     <width>71</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
+    <string notr="true">background-color:green;</string>
    </property>
    <property name="text">
-    <string>F3</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_F4">
+  <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>230</y>
-     <width>51</width>
-     <height>51</height>
+     <x>890</x>
+     <y>150</y>
+     <width>71</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
+    <string notr="true">background-color:rgb(255, 140, 0);</string>
    </property>
    <property name="text">
-    <string>F4</string>
+    <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_F7">
+  <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
-     <x>130</x>
+     <x>1000</x>
+     <y>100</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>阻抗过高</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>160</y>
+     <width>71</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>阻抗偏高</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
      <y>210</y>
-     <width>51</width>
-     <height>51</height>
+     <width>71</width>
+     <height>21</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
    </property>
    <property name="text">
-    <string>F7</string>
+    <string>阻抗正常</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_F8">
-   <property name="geometry">
-    <rect>
-     <x>590</x>
-     <y>210</y>
-     <width>51</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>F8</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_C3">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>380</y>
-     <width>51</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>C3</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_C4">
-   <property name="geometry">
-    <rect>
-     <x>500</x>
-     <y>380</y>
-     <width>51</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>C4</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_T7">
-   <property name="geometry">
-    <rect>
-     <x>70</x>
-     <y>380</y>
-     <width>51</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>T7</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_T8">
-   <property name="geometry">
-    <rect>
-     <x>650</x>
-     <y>380</y>
-     <width>51</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>T8</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_P3">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>540</y>
-     <width>51</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>P3</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_P4">
-   <property name="geometry">
-    <rect>
-     <x>480</x>
-     <y>540</y>
-     <width>51</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>P4</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_P7">
-   <property name="geometry">
-    <rect>
-     <x>130</x>
-     <y>550</y>
-     <width>51</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>P7</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_P8">
-   <property name="geometry">
-    <rect>
-     <x>590</x>
-     <y>550</y>
-     <width>51</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>P8</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_O1">
-   <property name="geometry">
-    <rect>
-     <x>270</x>
-     <y>660</y>
-     <width>51</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>O1</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_O2">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>660</y>
-     <width>51</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">QPushButton {
-    width: 25px;
-    height: 5px;
-    border-radius: 25px;
-    background-color: #808080;  /* 初始颜色 */
-    color: white;
-    font-size: 18px;
-}
-</string>
-   </property>
-   <property name="text">
-    <string>O2</string>
-   </property>
-  </widget>
-  <widget class="QWidget" name="gridLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>780</x>
-     <y>50</y>
-     <width>160</width>
-     <height>113</height>
-    </rect>
-   </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="2" column="0">
-     <widget class="QSpinBox" name="spinBox_Max"/>
-    </item>
-    <item row="4" column="0">
-     <widget class="QSpinBox" name="spinBox_Min"/>
-    </item>
-    <item row="2" column="1">
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>kHz</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0" colspan="2">
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>最大阻抗值</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="0" colspan="2">
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>最小阻抗值</string>
-      </property>
-     </widget>
-    </item>
-    <item row="4" column="1">
-     <widget class="QLabel" name="label_4">
-      <property name="text">
-       <string>kHz</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0" colspan="2">
-     <widget class="QLabel" name="label_5">
-      <property name="styleSheet">
-       <string notr="true">font: 700 9pt &quot;Microsoft YaHei UI&quot;;</string>
-      </property>
-      <property name="text">
-       <string>阻抗区间设置</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
+  <zorder>label_3</zorder>
+  <zorder>P8</zorder>
+  <zorder>C3</zorder>
+  <zorder>F3</zorder>
+  <zorder>T4</zorder>
+  <zorder>PO7</zorder>
+  <zorder>FP2</zorder>
+  <zorder>F7</zorder>
+  <zorder>FC2</zorder>
+  <zorder>CP2</zorder>
+  <zorder>CP1</zorder>
+  <zorder>P7</zorder>
+  <zorder>Pz</zorder>
+  <zorder>T3</zorder>
+  <zorder>FP1</zorder>
+  <zorder>PO4</zorder>
+  <zorder>O1</zorder>
+  <zorder>PO3</zorder>
+  <zorder>O2</zorder>
+  <zorder>F8</zorder>
+  <zorder>FC5</zorder>
+  <zorder>Fz</zorder>
+  <zorder>CP5</zorder>
+  <zorder>F4</zorder>
+  <zorder>P4</zorder>
+  <zorder>Oz</zorder>
+  <zorder>C4</zorder>
+  <zorder>P3</zorder>
+  <zorder>FC6</zorder>
+  <zorder>CP6</zorder>
+  <zorder>PO8</zorder>
+  <zorder>Cz</zorder>
+  <zorder>FC1</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_4</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_6</zorder>
+  <zorder>label_7</zorder>
  </widget>
  <resources/>
  <connections/>
