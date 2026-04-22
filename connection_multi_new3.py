@@ -316,7 +316,7 @@ class Trans(QObject):
                     print("check_data impedance: queue closed, exit thread")
                     break
                 except Exception as e:
-                    print("check_data impedance Error", e)
+                    print("check_data impedance Error",e)
 
     # def udp_transmission(self):    #发送udp信号
     #     Client_socket = socket(AF_INET, SOCK_DGRAM)

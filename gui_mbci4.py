@@ -1,6 +1,5 @@
 import sys
-
-import PyQt5.QtGui as QtGui
+from PyQt5.QtCore import QTimer
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import QApplication, QMainWindow, QScrollArea, QComboBox, QVBoxLayout, QWidget
 from PyQt5.QtGui import QColor
@@ -36,11 +35,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.downsamples = 250 # 降采样率
         self.trans = Trans()
         # self.udp = UdpSend()
+
         '''
             脑电图显示
         '''
         # 左侧脑电图
         self.eeg_widget = EEGPlotWidget(num_channels=self.num_channels,fs=self.downsamples)
+
+        # self.timer = QTimer()
+        # self.timer.timeout.connect(self.eeg_widget.stream_update)
+        # self.timer.start(20)  # 20ms 一帧（≈50 FPS）
 
         # 创建滑条窗口
         # self.scroll_EEG = QScrollArea()
@@ -119,6 +123,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.lineEdit.clear()
         self.plainTextEdit_connect.appendPlainText(f"发送的Trigger：{text}")
         self.trigger.emit(text)
+        self.eeg_widget.add_marker(text)
         # self.trigger.connect(self.udp)
 
     # 显示连接（多连接使用）
@@ -226,14 +231,38 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                     self.impedancewidget.channels[id].setText(
                         "<div style='text-align: center; font-size: 10pt; font-family: Microsoft YaHei UI;'>" +
                         self.impedancewidget.channels_names[id] + '<br>' + '{:.2f}'.format(impedance[id]) + 'KΩ</div>')
-                    if impedance[id] > parameter.impedance_max:
-                        color = QColor(220, 20, 60)
-                    elif impedance[id] < parameter.impedance_min:
-                        color = QColor(50, 205, 50)
+                    if impedance[id] < parameter.impedance_range[0]:
+                        color = parameter.impedance_color[0]
+                    elif impedance[id] > parameter.impedance_range[0] and impedance[id] < parameter.impedance_range[1]:
+                        color = parameter.impedance_color[1]
+                    elif impedance[id] > parameter.impedance_range[1] and impedance[id] < parameter.impedance_range[2]:
+                        color = parameter.impedance_color[2]
+                    elif impedance[id] > parameter.impedance_range[2] and impedance[id] < parameter.impedance_range[3]:
+                        color = parameter.impedance_color[3]
+                    elif impedance[id] > parameter.impedance_range[3] and impedance[id] < parameter.impedance_range[4]:
+                        color = parameter.impedance_color[4]
+                    elif impedance[id] > parameter.impedance_range[4] and impedance[id] < parameter.impedance_range[5]:
+                        color = parameter.impedance_color[5]
+                    elif impedance[id] > parameter.impedance_range[5] and impedance[id] < parameter.impedance_range[6]:
+                        color = parameter.impedance_color[6]
+                    elif impedance[id] > parameter.impedance_range[6] and impedance[id] < parameter.impedance_range[7]:
+                        color = parameter.impedance_color[7]
+                    elif impedance[id] > parameter.impedance_range[7] and impedance[id] < parameter.impedance_range[8]:
+                        color = parameter.impedance_color[8]
+                    elif impedance[id] > parameter.impedance_range[8] and impedance[id] < parameter.impedance_range[9]:
+                        color = parameter.impedance_color[9]
+                    elif impedance[id] > parameter.impedance_range[9] and impedance[id] < parameter.impedance_range[10]:
+                        color = parameter.impedance_color[10]
+                    elif impedance[id] > parameter.impedance_range[10] and impedance[id] < parameter.impedance_range[11]:
+                        color = parameter.impedance_color[11]
                     else:
-                        color = QColor(255, 140, 0)
-                    self.impedancewidget.channels[id].setStyleSheet(f"background-color: {color.name()};")
-                    id += 1
+                        color = parameter.impedance_color[12]
+                    self.impedancewidget.channels[id].setStyleSheet(
+                        f"""
+                            background-color: rgb({color[0]}, {color[1]}, {color[2]});
+                            border-radius: 8px;
+                            """
+                    )
         except Exception as e:
             # print(2)
             # print(f"[DEBUG] Received data shape: {data.shape}")

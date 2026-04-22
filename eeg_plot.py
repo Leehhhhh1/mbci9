@@ -2,16 +2,21 @@ import numpy as np
 import pyqtgraph as pg
 from PyQt5.QtGui import QFont
 from PyQt5.QtWidgets import QWidget, QVBoxLayout
-
+from collections import deque
 
 class EEGPlotWidget(QWidget):
     def __init__(self, num_channels, fs, seconds=5):  # fs降采样率
         super().__init__()
 
+        self.global_index = 0
+        self.markers = []
+        self.marker_items = []
         self.num_channels = num_channels
         self.fs = fs
         self.seconds = seconds
         self.buffer_len = fs * seconds
+        # self.data_queue = deque()
+        # self.chunk_size = 50
 
         # 环形缓冲区
         self.data = np.zeros((num_channels, self.buffer_len))
@@ -99,10 +104,25 @@ class EEGPlotWidget(QWidget):
         #
         # # 只给最后一个通道显示 x 轴
         # self.plots[-1].showAxis('bottom')
+    def add_marker(self,text):
+        self.markers.append((self.global_index, text))
+        print("marker add",self.global_index)
+
+    def push_data(self,data):
+        for i in range(0, data.shape[1], self.chunk_size):
+            self.data_queue.append(data[:, i:i + self.chunk_size])
+
+    # def stream_update(self):
+    #     if not self.data_queue:
+    #         return
+    #
+    #     data = self.data_queue.popleft()
+    #     self.update_plot(data)
 
     def update_y(self, data):
         n = data.shape[1]
-
+        self.global_index += n
+        print("global_index", self.global_index)
         if n >= self.buffer_len:
             self.data = data[:, -self.buffer_len:]
             self.write_ptr = 0
@@ -134,3 +154,30 @@ class EEGPlotWidget(QWidget):
             y = display[ch] * scale
             y = y - self.offset * ch
             self.curves[ch].setData(x, y)
+
+        for item in self.marker_items:
+            self.pw.removeItem(item)
+        self.marker_items.clear()
+
+        new_markers = []
+
+        for pos, text in self.markers:
+            if self.global_index - self.buffer_len <= pos <= self.global_index:
+                #  映射到当前显示位置
+                display_pos = pos - (self.global_index - self.buffer_len)
+
+                # 画竖线
+                line = pg.InfiniteLine(pos=display_pos, angle=90,
+                                       pen=pg.mkPen('r', width=3))
+                self.pw.addItem(line)
+                self.marker_items.append(line)
+
+                # 画文字
+                label = pg.TextItem(text, color='r', anchor=(0, 1))
+                label.setZValue(10)
+                label.setPos(display_pos, self.offset)
+                self.pw.addItem(label)
+                self.marker_items.append(label)
+
+                new_markers.append((pos, text))
+        self.markers = new_markers
