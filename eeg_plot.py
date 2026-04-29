@@ -119,9 +119,11 @@ class EEGPlotWidget(QWidget):
     #     data = self.data_queue.popleft()
     #     self.update_plot(data)
 
-    def update_y(self, data):
+    def update_y(self, data, advance_samples=None):
         n = data.shape[1]
-        self.global_index += n
+        if advance_samples is None:
+            advance_samples = n
+        self.global_index += advance_samples
         print("global_index", self.global_index)
         if n >= self.buffer_len:
             self.data = data[:, -self.buffer_len:]
@@ -160,11 +162,13 @@ class EEGPlotWidget(QWidget):
         self.marker_items.clear()
 
         new_markers = []
+        visible_start = self.global_index - self.buffer_len
+        visible_end = self.global_index
 
         for pos, text in self.markers:
-            if self.global_index - self.buffer_len <= pos <= self.global_index:
+            if visible_start <= pos <= visible_end:
                 #  映射到当前显示位置
-                display_pos = pos - (self.global_index - self.buffer_len)
+                display_pos = pos - visible_start
 
                 # 画竖线
                 line = pg.InfiniteLine(pos=display_pos, angle=90,

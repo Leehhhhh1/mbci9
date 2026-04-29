@@ -125,7 +125,14 @@ class TcpSave(Thread):  # 保存数据
                     data = self.queue_save.get(timeout=0.5)
                     # data_1 = self.queue_saveNew.get(timeout = 0.5)
                     # f1.write(data_1)
-                    np.savetxt(f1, data, fmt='%.2f')
+                    #  如果是 trigger
+                    if isinstance(data, tuple) and data[0] == "TRIGGER":
+                        _, index, text = data
+                        f1.write(f"#TRIGGER,{index},{text}\n")
+
+                    #  如果是 EEG 数据
+                    else:
+                        np.savetxt(f1, data, fmt='%.2f')
                 except Empty:
                     continue
                 except Exception as e:
@@ -281,7 +288,10 @@ class Trans(QObject):
                     # if self.flag:                  #实时波形检测
                     try:
                         id_ = self.id + 1
+                        # data = self.threads[id_][0].queue_data.get(timeout=0.5)
+                        # print("recv check_data", type(data), data.shape)
                         data = self.threads[id_][0].queue_data.get(timeout=0.5)
+                        display_step = max(1, data.shape[1] // self.downsample)
                         # print("recv check_data", type(data), data.shape)
                         self.data_preprocess_eeg = np.concatenate((self.data_preprocess_eeg, data),
                                                                   axis=1)  # 拼接数据 axis=1 为横向拼接 ； axis=0 为纵向拼接
@@ -289,7 +299,8 @@ class Trans(QObject):
                         data_preprocessed = preprocessing(self.data_preprocess_eeg, self.num_channels, self.sample, self.downsample)
                         print(f"采样率为:{self.sample},降采样比例为：{self.downsample}")
                         data_preprocessed = np.round(data_preprocessed, 2)[:, 375: -375]  # 保留 2 位小数的四舍五入
-                        self.animate_signal.emit(data_preprocessed)
+                        # self.animate_signal.emit(data_preprocessed)
+                        self.animate_signal.emit((data_preprocessed, display_step))
                     except (EOFError, BrokenPipeError):
                         print("check_data EEG: queue closed, exit thread")
                         break

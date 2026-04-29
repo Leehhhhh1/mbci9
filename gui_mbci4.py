@@ -124,6 +124,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.plainTextEdit_connect.appendPlainText(f"发送的Trigger：{text}")
         self.trigger.emit(text)
         self.eeg_widget.add_marker(text)
+        self.trans.queue_save.put(("TRIGGER", self.eeg_widget.global_index, text))
         # self.trigger.connect(self.udp)
 
     # 显示连接（多连接使用）
@@ -165,7 +166,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     # 更新动画 animate_signal信号槽函数
     def update_animate(self, data):
-        self.eeg_widget.update_y(data)
+        advance_samples = None
+        if isinstance(data, tuple):
+            data, advance_samples = data
+        self.eeg_widget.update_y(data, advance_samples)
         self.animation_spectrogram.update_y(data)
         # time.sleep(0.05)
 
