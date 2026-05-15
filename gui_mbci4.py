@@ -1,8 +1,6 @@
 import sys
-from PyQt5.QtCore import QTimer
-from PyQt5 import QtCore
+from PyQt5 import QtCore,QtGui
 from PyQt5.QtWidgets import QApplication, QMainWindow, QScrollArea, QComboBox, QVBoxLayout, QWidget
-from PyQt5.QtGui import QColor
 from ui_mbci3 import Ui_MainWindow
 from ui_filter import Ui_Filter
 from impedance_test import ImpedanceWidget
@@ -12,7 +10,6 @@ import preprocessing
 import parameter
 from eeg_plot import EEGPlotWidget
 import numpy as np
-import time
 
 
 # pyuic5 -o ui_mbci.py ui_mbci.ui

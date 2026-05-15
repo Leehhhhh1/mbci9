@@ -113,7 +113,7 @@ class Ui_MainWindow(object):
         self.scrollArea_impedance.setWidgetResizable(True)
         self.scrollArea_impedance.setObjectName("scrollArea_impedance")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 1192, 869))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 98, 28))
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
         self.scrollArea_impedance.setWidget(self.scrollAreaWidgetContents_2)
         self.verticalLayout_2.addWidget(self.scrollArea_impedance)
@@ -135,7 +135,7 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menu.menuAction())
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):

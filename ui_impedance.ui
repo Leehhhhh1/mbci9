@@ -823,22 +823,6 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>0</y>
-     <width>801</width>
-     <height>861</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>background2.jpg</pixmap>
-   </property>
-  </widget>
   <widget class="QLabel" name="Cz">
    <property name="geometry">
     <rect>
@@ -1098,51 +1082,6 @@ color: white;</string>
     <string>20-50ku(阻抗过高)</string>
    </property>
   </widget>
-  <zorder>label_3</zorder>
-  <zorder>P8</zorder>
-  <zorder>C3</zorder>
-  <zorder>F3</zorder>
-  <zorder>T4</zorder>
-  <zorder>PO7</zorder>
-  <zorder>FP2</zorder>
-  <zorder>F7</zorder>
-  <zorder>FC2</zorder>
-  <zorder>CP2</zorder>
-  <zorder>CP1</zorder>
-  <zorder>P7</zorder>
-  <zorder>Pz</zorder>
-  <zorder>T3</zorder>
-  <zorder>FP1</zorder>
-  <zorder>PO4</zorder>
-  <zorder>O1</zorder>
-  <zorder>PO3</zorder>
-  <zorder>O2</zorder>
-  <zorder>F8</zorder>
-  <zorder>FC5</zorder>
-  <zorder>Fz</zorder>
-  <zorder>CP5</zorder>
-  <zorder>F4</zorder>
-  <zorder>P4</zorder>
-  <zorder>Oz</zorder>
-  <zorder>C4</zorder>
-  <zorder>P3</zorder>
-  <zorder>FC6</zorder>
-  <zorder>CP6</zorder>
-  <zorder>PO8</zorder>
-  <zorder>Cz</zorder>
-  <zorder>FC1</zorder>
-  <zorder>label</zorder>
-  <zorder>label_2</zorder>
-  <zorder>label_4</zorder>
-  <zorder>label_5</zorder>
-  <zorder>label_6</zorder>
-  <zorder>label_7</zorder>
-  <zorder>label_8</zorder>
-  <zorder>label_9</zorder>
-  <zorder>label_10</zorder>
-  <zorder>label_11</zorder>
-  <zorder>label_12</zorder>
-  <zorder>label_13</zorder>
  </widget>
  <resources/>
  <connections/>
