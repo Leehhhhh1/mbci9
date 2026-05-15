@@ -1,5 +1,5 @@
 import numpy as np
-import mne
+from scipy.signal import resample_poly
 from scipy import signal
 from scipy.fftpack import fft
 
@@ -38,8 +38,14 @@ def preprocessing(data_EEG, num_channels, sample, downsample, notch_freq = 50, l
     # down sampled to sample/downsample Hz 降采样
     data_down_channels = buttered_data_channels
     if downsample != 1:
-        data_down_channels = mne.filter.resample(buttered_data_channels, down=downsample, npad='auto', axis=1,
-                                                 window='boxcar', n_jobs=1, pad='reflect_limited', verbose=None)
+        data_down_channels = resample_poly(
+            buttered_data_channels,
+            up=1,
+            down=downsample,
+            axis=1
+        )
+        # data_down_channels = mne.filter.resample(buttered_data_channels, down=downsample, npad='auto', axis=1,
+        #                                          window='boxcar', n_jobs=1, pad='reflect_limited', verbose=None)
     return data_down_channels #（通道， 时间）
 
 def get_impedance(data):

@@ -26,7 +26,7 @@
          </size>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="tab_main">
          <property name="accessibleName">
@@ -178,13 +178,6 @@
               </property>
              </widget>
             </widget>
-            <widget class="QWidget" name="layoutWidget">
-             <layout class="QVBoxLayout" name="verticalLayout_spectrogram">
-              <item>
-               <widget class="QComboBox" name="combobox_channel"/>
-              </item>
-             </layout>
-            </widget>
            </widget>
           </item>
          </layout>
@@ -233,8 +226,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>1184</width>
-                 <height>849</height>
+                 <width>1192</width>
+                 <height>869</height>
                 </rect>
                </property>
               </widget>
@@ -256,7 +249,7 @@
      <x>0</x>
      <y>0</y>
      <width>1240</width>
-     <height>26</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">

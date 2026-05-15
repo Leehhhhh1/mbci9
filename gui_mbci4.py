@@ -61,18 +61,18 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # 右侧频谱图
         # 创建下拉菜单 (QComboBox)
-        self.combobox_channel.addItem("ALL Channels")
-        for i in range(1, self.num_channels + 1):
-            self.combobox_channel.addItem("Channel " + str(i))
-        self.combobox_channel.currentIndexChanged.connect(self.channel_change)
+        # self.combobox_channel.addItem("ALL Channels")
+        # for i in range(1, self.num_channels + 1):
+        #     self.combobox_channel.addItem("Channel " + str(i))
+        # self.combobox_channel.currentIndexChanged.connect(self.channel_change)
 
         # 创建一个垂直布局，先添加下拉菜单，再添加 spectrogram
         # self.layout = QVBoxLayout()
         # self.layout.addWidget(self.combobox_channel)  # 添加下拉菜单到布局
         # 创建频谱图
-        self.animation_spectrogram = Animation_Spectrogram(width=3, height=2, dpi=100, num_channels=self.num_channels,
-                                                           samples=self.samples)
-        self.verticalLayout_spectrogram.addWidget(self.animation_spectrogram)
+        # self.animation_spectrogram = Animation_Spectrogram(width=3, height=2, dpi=100, num_channels=self.num_channels,
+        #                                                    samples=self.samples)
+        # self.verticalLayout_spectrogram.addWidget(self.animation_spectrogram)
 
 
         '''
